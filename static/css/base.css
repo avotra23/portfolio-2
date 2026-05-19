@@ -1,3 +1,67 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-    body { background-color: #0f172a; color: white; min-height: 150vh; padding-top: 120px; }
-    
+body { background-color: #0f172a; color: white; min-height: 150vh; padding-top: 120px; }
+
+/* Style de la section */
+#profil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 10%;
+    gap: 2rem;
+    width: 90%;
+    margin-left: 5%;
+}
+
+/* Texte à gauche */
+#p-left {
+    flex: 1;
+}
+
+#p-left h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #bac4c8;
+    margin-bottom: 1.5rem;
+}
+
+#motivation {
+    font-style: italic;
+    font-weight: 600;
+    color: #0984e3;
+    border-left: 4px solid #0984e3;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Bouton style élégant */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #0984e3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #03375e;
+}
+
+/* Image à droite */
+#p-right {
+    flex: 0 0 350px;
+    text-align: center;
+}
+
+#pers {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

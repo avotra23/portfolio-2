@@ -6,11 +6,11 @@ const liquidToggle = document.getElementById('liquidToggle');
       
       if(liquidNav.classList.contains('open')) {
         liquidToggle.innerText = '✕';
-        liquidToggle.style.background = '#ff0055';
+        liquidToggle.style.background = '#ff0055c4';
         liquidToggle.style.color = '#fff';
       } else {
         liquidToggle.innerText = 'Menu';
-        liquidToggle.style.background = '#00ffa3';
+        liquidToggle.style.background = 'rgb(44, 106, 160)';
         liquidToggle.style.color = '#000';
       }
     });

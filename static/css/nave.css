@@ -20,9 +20,12 @@
     }
     .nav-links-desktop { display: flex; gap: 20px; list-style: none; }
     .nav-links-desktop a { color: white; text-decoration: none; font-size: 14px; }
-
+    .nav-links-desktop a:hover{
+      transition: 0.3s;
+      color: rgba(240, 248, 255, 0.814);
+    }
     /* --- NAV MOBILE (Liquid Morphing) --- */
-    .liquid-menu-wrapper { visibility: hidden; }
+    .liquid-menu-wrapper { visibility: hidden; display: none; }
 
     @media (max-width: 768px) {
       .nav-desktop { display: none; } /* Cache la barre desktop */
@@ -30,6 +33,7 @@
       
     /* Retire le pointer-events: none du wrapper */
     .liquid-menu-wrapper {
+      display: block;
       visibility: visible;
       position: fixed;
       bottom: 20px;
@@ -54,9 +58,9 @@
       width: 70px;
       height: 70px;
       border-radius: 50%;
-      background: #00ffa3;
+      background: rgb(44, 106, 160);
       border: none;
-      color: #000;
+      color: white;
       font-weight: bold;
       cursor: pointer;
       z-index: 5;
@@ -71,7 +75,7 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: #00ffa3;
+      background: rgb(44, 106, 160);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -90,4 +94,9 @@
     .liquid-nav.open .item-2 { transform: translateY(-170px); }
     .liquid-nav.open .item-3 { transform: translateY(-250px); }
     .liquid-nav.open .item-4 { transform: translateY(-330px); }
+    
+    .menu-item img{
+      width: 20px;
+      filter: invert(1);
+    }
     }
