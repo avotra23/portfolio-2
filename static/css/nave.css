@@ -1,0 +1,93 @@
+/* --- FILTRE SVG POUR LE LIQUIDE (Masqué mais actif) --- */
+    .svg-filter { display: none; }
+
+    /* --- NAV DESKTOP (Bulle Flottante) --- */
+    .nav-desktop {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      z-index: 1000;
+    }
+    .nav-links-desktop { display: flex; gap: 20px; list-style: none; }
+    .nav-links-desktop a { color: white; text-decoration: none; font-size: 14px; }
+
+    /* --- NAV MOBILE (Liquid Morphing) --- */
+    .liquid-menu-wrapper { visibility: hidden; }
+
+    @media (max-width: 768px) {
+      .nav-desktop { display: none; } /* Cache la barre desktop */
+      
+      
+    /* Retire le pointer-events: none du wrapper */
+    .liquid-menu-wrapper {
+      visibility: visible;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: 320px; /* Conteneur assez haut pour l'éjection */
+      z-index: 9999;
+      filter: url("#liquid-goo"); 
+      pointer-events: none; /* Évite de bloquer les clics sur la page quand fermé */
+    }
+
+    .liquid-nav {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-button {
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #00ffa3;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 5;
+      pointer-events: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item {
+      position: absolute;
+      bottom: 15px;
+      left: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #00ffa3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 20px;
+      z-index: 2;
+      pointer-events: auto;
+      /* Position de départ cachée sous le gros bouton */
+      transform: translateY(0px); 
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* --- ANIMATION JS : ÉJECTION VERS LE HAUT (PC & MOBILE) --- */
+    .liquid-nav.open .item-1 { transform: translateY(-90px); }
+    .liquid-nav.open .item-2 { transform: translateY(-170px); }
+    .liquid-nav.open .item-3 { transform: translateY(-250px); }
+    .liquid-nav.open .item-4 { transform: translateY(-330px); }
+    }

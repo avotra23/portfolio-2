@@ -1,0 +1,62 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #0d0e12; color: white; font-family: sans-serif; min-height: 100vh; }
+
+    /* Zone de filtrage augmentée pour éviter que les éléments disparaissent */
+    .liquid-menu-wrapper {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: 320px; /* Conteneur assez haut pour l'éjection */
+      z-index: 9999;
+      filter: url("#liquid-goo"); 
+      pointer-events: none; /* Évite de bloquer les clics sur la page quand fermé */
+    }
+
+    .liquid-nav {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-button {
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #00ffa3;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 5;
+      pointer-events: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item {
+      position: absolute;
+      bottom: 15px;
+      left: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #00ffa3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 20px;
+      z-index: 2;
+      pointer-events: auto;
+      /* Position de départ cachée sous le gros bouton */
+      transform: translateY(0px); 
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* --- ANIMATION JS : ÉJECTION VERS LE HAUT (PC & MOBILE) --- */
+    .liquid-nav.open .item-1 { transform: translateY(-80px); }
+    .liquid-nav.open .item-2 { transform: translateY(-150px); }
+    .liquid-nav.open .item-3 { transform: translateY(-220px); }
