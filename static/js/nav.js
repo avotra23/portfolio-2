@@ -14,4 +14,3 @@
         liquidToggle.style.color = 'white';
       }
     });
-

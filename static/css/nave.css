@@ -100,3 +100,29 @@
       filter: invert(1);
     }
     }
+
+
+
+    /*Animation Lettre */
+  .ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: clamp(1.2rem, 3vw, 2.5rem); /* Ajuste la taille selon l'écran */
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+  color: rgb(221, 209, 46);
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+  
+}

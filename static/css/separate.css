@@ -1,0 +1,38 @@
+hr {
+    /* Largeur et centrage */
+    width: 300px;
+    max-width: 80%;
+    margin: 25px auto 30px;
+    
+    /* Configuration du flex pour centrer l'icône */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Style de la ligne */
+    border: 0;
+    border-top: solid 3px #555;
+    position: relative; /* Indispensable */
+    overflow: visible;  /* Assure que l'icône n'est pas coupée */
+}
+
+hr:after {
+    font-family: "FontAwesome";
+    font-size: 3rem;
+    
+    /* Couleur */
+    background-color: #0f172a; /* Fond de votre page */
+    color: #fff;
+    
+    /* Espacement */
+    padding: 0 15px;
+    
+    /* Positionnement vertical pour remonter sur la ligne */
+    margin-top: -20px; /* Annule l'épaisseur de la ligne */
+}
+hr.Tech::after{
+    content: "\f013";
+}
+hr.Projets::after {
+    content: "\f07b"; 
+}

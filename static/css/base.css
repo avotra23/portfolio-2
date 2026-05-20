@@ -15,6 +15,8 @@ body { background-color: #0f172a; color: white; min-height: 150vh; padding-top: 
 /* Texte à gauche */
 #p-left {
     flex: 1;
+    min-width: 0; /* Important : permet au bloc de se réduire au besoin */
+    overflow: hidden;
 }
 
 #p-left h2 {
@@ -43,7 +45,7 @@ body { background-color: #0f172a; color: white; min-height: 150vh; padding-top: 
 .btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background: #0984e3;
+    background: #0984e3 !important;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -51,7 +53,7 @@ body { background-color: #0f172a; color: white; min-height: 150vh; padding-top: 
 }
 
 .btn:hover {
-    background: #03375e;
+    background: #03375e !important;
 }
 
 /* Image à droite */

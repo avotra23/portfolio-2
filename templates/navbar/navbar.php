@@ -13,8 +13,8 @@
     <div style="font-weight: bold;">✨ MTechA</div>
     <ul class="nav-links-desktop">
       <li><a href="accueil.php">Accueil</a></li>
-        <li><a href="#">A propos</a></li>
-        <li><a href="#">TechReal</a></li>
+        <li><a href="#">TecPro</a></li>
+        <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
   </nav>
