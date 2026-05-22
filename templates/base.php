@@ -10,6 +10,7 @@
     <script src="../static/js/nav.js" defer></script>
     <script src="../static/js/anime.min.js"></script>
     <link rel="stylesheet" href="../static/css/anim.css">
+    <link rel="stylesheet" href="../static/css/bouton.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css
 ">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
